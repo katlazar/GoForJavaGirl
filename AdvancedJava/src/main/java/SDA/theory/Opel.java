@@ -7,6 +7,11 @@ public class Opel extends Car {
         //super(capacity);         //inny konstuktor
     }
 
+    @Override
+    public void printParameters() {
+        System.out.println("Marka: Opel, pojemność: " + getCapacity());
+    }
+
     public void showCapacity () {
         System.out.println(getCapacity()); // metoda getCapacity() pochodzi z klasy Car
     }

@@ -15,6 +15,10 @@ public class App
         showMark(opelCar);
         showMark(bmwCar);
         showMark(otherCar);
+
+        opelCar.printParameters();
+        bmwCar.printParameters();
+        otherCar.printParameters();
     }
 
     public static void showMark(Car car) {

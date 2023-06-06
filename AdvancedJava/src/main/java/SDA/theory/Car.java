@@ -1,6 +1,6 @@
 package SDA.theory;
 
-public class Car {
+public abstract class Car {
     private String mark;
     private double capacity;
 
@@ -22,4 +22,6 @@ public class Car {
     public String getMark() {
         return mark;
     }
+
+    public abstract void printParameters();
 }
