@@ -46,6 +46,7 @@ public class App
         int min = 200;
         int max = 400;
         printTitles(String.format("Books with number of pages between %d and %d:", min, max), myLitleLibrary.getBooksByPagesAmount(min, max));
+        myLitleLibrary.printLibraryDetails(myLitleLibrary.getBooksByPagesAmount(min, max));
     }
 
     private static void printTitles(String listTitle, List<Book> books) {

@@ -91,6 +91,15 @@ public class Library {
         }
     }
 
+    public void printLibraryDetails(List<Book> collection) {
+        int number = 0;
+
+        for (Book book : collection) {
+            System.out.printf("%d.  %s, %s, pages %d, genre %s, rating %d %n", ++number, book.getTitle(), book.getAuthor(),
+                    book.getPages(), book.getGenre(), book.getRating());
+        }
+    }
+
     public void addBook(Book book) {
         this.collection.add(book);
     }
