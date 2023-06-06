@@ -17,11 +17,11 @@ package SDA.exercises;
 public class Main {
     public static void main(String[] args)
     {
-       MobilePhone iPhone = new MobilePhone(6.1f, 8, "Apple A15 Bionic", "iOS 15 ", "5G", true);
-       Tablet samsung = new Tablet(10.4f, 3, "Qualcomm Snapdragon 662 ", "Android 10", true, true);
+       MobilePhone iPhone = new MobilePhone(6.1f, 8, "Apple A15 Bionic", "iOS 15 ", true);
+       Tablet samsung = new Tablet(10.4f, 3, "Qualcomm Snapdragon 662 ", "Android 10", false);
 
-       iPhone.showDeviceInfoMobile();
+       iPhone.showDeviceInfo();
        System.out.println();
-       samsung.showDeviceInfoTablet();
+       samsung.showDeviceInfo();
     }
 }

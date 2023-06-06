@@ -4,19 +4,17 @@ package SDA.exercises;
 //- MobilePhone z polami: LTE support
 //- Tablet -> pencil support
 public class MobilePhone extends MobileDevice {
-    private String lte; // LTE
-    private boolean support; // support
+    private boolean lte; // LTE support
 
-    public MobilePhone(float monitorSize, int memory, String cpu, String system, String lte, boolean support) {
+    public MobilePhone(float monitorSize, int memory, String cpu, String system, boolean support) {
         super(monitorSize, memory, cpu, system);
-        this.lte = lte;
-        this.support = support;
+        this.lte = support;
         super.setType("mobile phone");
     }
 
-    public void showDeviceInfoMobile() {
-        showDeviceInfo();
+    @Override
+    public void showDeviceInfo() {
+        super.showDeviceInfo();
         System.out.println("LTE: " + lte);
-        System.out.println("support: " + support);
     }
 }
