@@ -5,4 +5,5 @@ public interface MovieRepositoryApi {
     void delete(int index);
     Movie[] findAll();
     Movie findByTitle(String title);
+    void printAll();
 }

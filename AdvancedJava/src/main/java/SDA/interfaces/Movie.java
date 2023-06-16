@@ -4,9 +4,9 @@ public class Movie {
     private String title;
     private int yearOfRelease;
 
-    public Movie(String title, int yearOfRelease) {
+    public Movie(String title, int year) {
         this.title = title;
-        this.yearOfRelease = yearOfRelease;
+        this.yearOfRelease = year;
     }
 
     public String getTitle() {
