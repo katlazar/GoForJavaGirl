@@ -19,6 +19,8 @@ public class MovieRepository implements MovieRepositoryApi {
     public void add(Movie movie) {
         if (counter < maxCountOfMovies) {
             movies[counter++] = movie;
+        } else {
+            System.out.println("Movie not added, too many movies in repository.");
         }
     }
 
@@ -29,6 +31,8 @@ public class MovieRepository implements MovieRepositoryApi {
                 movies[i] = movies[i + 1];
             }
             counter--;
+        } else {
+            System.out.println("Movie not deleted, bad index.");
         }
     }
 
@@ -44,6 +48,7 @@ public class MovieRepository implements MovieRepositoryApi {
                 return movie;
             }
         }
+        System.out.println("Movie not found.");
         return null;
     }
 
