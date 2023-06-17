@@ -26,11 +26,9 @@ public enum Continent {
     }
 
     public static Continent largestContinent() {
-        double max = 0;
-        Continent maxContinent = null;
+        Continent maxContinent = values()[0];
         for (Continent continent : values()) {
-            if (continent.area > max) {
-                max = continent.area;
+            if (continent.area > maxContinent.area) {
                 maxContinent = continent;
             }
         }
@@ -38,11 +36,9 @@ public enum Continent {
     }
 
     public static Continent smallestContinent() {
-        double min = Double.MAX_VALUE;
-        Continent minContinent = null;
+        Continent minContinent = values()[0];
         for (Continent continent : values()) {
-            if (continent.area < min) {
-                min = continent.area;
+            if (continent.area < minContinent.area) {
                 minContinent = continent;
             }
         }
