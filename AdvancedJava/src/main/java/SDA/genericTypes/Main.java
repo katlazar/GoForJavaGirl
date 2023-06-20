@@ -1,17 +1,14 @@
 package SDA.genericTypes;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class Main {
     public static void main(String[] args)
     {
-        Pair<Integer, String> pair1 = new Pair<>(1, "pierwsza para");
-        Pair<Integer, String> pair2 = new Pair<>(2, "druga para");
-        Pair<String, String> pair3 = new Pair<>("kolejna para", "trzecia para");
-
-        System.out.println(pair1.getFirst() + "  " + pair1.getSecond());
-        System.out.println();
+//        Pair<Integer, String> pair1 = new Pair<>(1, "pierwsza para");
+//        Pair<Integer, String> pair2 = new Pair<>(2, "druga para");
+//        Pair<String, String> pair3 = new Pair<>("kolejna para", "trzecia para");
+//
+//        System.out.println(pair1.getFirst() + "  " + pair1.getSecond());
+//        System.out.println();
 
         Integer[] table = new Integer[] {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
         System.out.print("Table: ");
