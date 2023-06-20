@@ -1,5 +1,10 @@
 package SDA.genericTypes;
 
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
 public class Main {
     public static void main(String[] args)
     {
@@ -16,6 +21,11 @@ public class Main {
         ArrayUtils.swap(table, 4, 8);
         System.out.print("Table after swap: ");
         ArrayUtils.printTable(table);
+
+        List<Integer> lista = new ArrayList<>();
+        Set<Integer> set = new HashSet<>();
+        System.out.println(set.add(1));
+        System.out.println(set.add(1));
     }
 
     // Napisz metodę generyczną, które zadaniem będzie zamiana (swap) elementów o wskazanych pozycjach w tablicy.
@@ -25,7 +35,7 @@ public class Main {
     // - pozycję drugiego elementu
     // tzn, np. jeśli mamy tablice 10 elementów, podamy pozycję 1: 4, pozycję 2: 8 to należy dokonać zamiany:
     // - element pod indeksem 4 musi znaleść się pod indeksem 8, a element o indeksie 8 musi znaleść się pod indeksem 4
-    class ArrayUtils {
+    static class ArrayUtils {
         public static <E> void swap(E[] tab, int pos1, int pos2) {
             E temp = tab[pos1];
             tab[pos1] = tab[pos2];
