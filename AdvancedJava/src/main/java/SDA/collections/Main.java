@@ -13,18 +13,47 @@ public class Main {
         stringList.add("234");
         stringList.add("-5");
         stringList.add("89");
-        stringList.add("-212671");
-        List<Integer> intList = convert(stringList);
-        for (Integer item : intList) {
+        stringList.add("1e-10");
+        stringList.add("-2000000");
+
+        List<Integer> intList1 = convert1(stringList);
+        for (Integer item : intList1) {
             System.out.print(item + ", ");;
         }
+        System.out.println();
 
+        try {
+            List<Integer> intList2 = convert2(stringList);
+            for (Integer item : intList2) {
+                System.out.print(item + ", ");;
+            }
+        }
+        catch (OneOfElementsIsNotANumberException e) {
+            e.printStackTrace();
+        }
     }
 
-    public static List<Integer> convert(List<String> stringList) {
+    public static List<Integer> convert1(List<String> stringList) {
         List<Integer> intList = new ArrayList<>();
+        if (stringList == null) throw new IllegalArgumentException("Given argument is null.");
         for (String item : stringList) {
-            intList.add(parseInt(item));
+            try {
+                intList.add(parseInt(item));
+            }
+            catch (NumberFormatException exception) {}
+        }
+        return intList;
+    }
+
+    public static List<Integer> convert2(List<String> stringList) {
+        List<Integer> intList = new ArrayList<>();
+        try {
+            for (String item : stringList) {
+                intList.add(parseInt(item));
+            }
+        }
+        catch (NumberFormatException exception) {
+            throw new OneOfElementsIsNotANumberException();
         }
         return intList;
     }
