@@ -28,6 +28,9 @@ public class Lists {
 
         // inny sposób
         System.out.println("Za pomocą Setu: " + new LinkedHashSet<>(values).stream().toList());
+
+        // jeszcze inny sposób
+        System.out.println("Za pomocą wbudowanej metody: " + values.stream().distinct().toList());
     }
 
     public static List<Integer> makeDistinct(List<Integer> inputList) {
