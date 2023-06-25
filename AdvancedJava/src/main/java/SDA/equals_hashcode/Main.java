@@ -28,5 +28,23 @@ public class Main {
         setOfMovies.add(movie1);
         setOfMovies.add(movie2);
         System.out.println("Liczba filmów w secie: " + setOfMovies.size());
+        System.out.println();
+
+        // klasa Movie2 z implementacją metody equals i hashCode
+
+        List<Movie2> listOfMovies2 = new ArrayList<>();
+        Set<Movie2> setOfMovies2 = new HashSet<>();
+        Movie2 movie3 = new Movie2("Joe Black", "Martin Brest", 1998);
+        Movie2 movie4 = new Movie2("Joe Black", "Martin Brest", 1998);
+
+        listOfMovies2.add(movie3);
+        listOfMovies2.add(movie4);
+        System.out.println("Liczba filmów na liście: " + listOfMovies2.size());
+        if (listOfMovies2.get(0).equals(listOfMovies2.get(1))) System.out.println("Znaleziono duplikaty");
+        else System.out.println("To są różne filmy");
+
+        setOfMovies2.add(movie3);
+        setOfMovies2.add(movie4);
+        System.out.println("Liczba filmów w secie: " + setOfMovies2.size());
     }
 }

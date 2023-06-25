@@ -16,16 +16,5 @@ public class Movie {
         this.director = director;
         this.yearOfRelease = yearOfRelease;
     }
-
-    @Override
-    public boolean equals(Object obj) {
-        Movie movie = (Movie) obj;
-        return this.title.equals(movie.title) && this.director.equals(movie.director) && this.yearOfRelease == movie.yearOfRelease;
-    }
-
-    @Override
-    public int hashCode() {
-        return this.title.hashCode() + this.director.hashCode() + this.yearOfRelease;
-    }
 }
 
