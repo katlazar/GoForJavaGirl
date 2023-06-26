@@ -8,7 +8,7 @@ import java.util.List;
 import static org.assertj.core.api.Assertions.assertThat;
 class MainTest {
     @Test
-    public void listOfAllSchoolStudentsShoulContainClassLists() {
+    public void listOfAllSchoolStudentsShouldContainClassLists() {
         // given
         School szkola = new School("Liceum Ogólnokształcące w Poznaniu");
         Klasa klasa1a = new Klasa("1A_LO");
