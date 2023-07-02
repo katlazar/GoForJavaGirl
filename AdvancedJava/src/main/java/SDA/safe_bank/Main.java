@@ -7,11 +7,11 @@ public class Main {
         double zbytDuzaKwota = 2000.00;
 
         // bezpieczne wyciągniecie środków
-        System.out.printf("Pobrane środki: %5.2f %n", konto.pobierzSrodkiBezpiecznie(malaKwota));
-        System.out.printf("Pobrane środki: %5.2f %n", konto.pobierzSrodkiBezpiecznie(zbytDuzaKwota));
+        System.out.printf("Pobrane środki: %5.2f zł%n", konto.pobierzSrodkiBezpiecznie(malaKwota));
+        System.out.printf("Pobrane środki: %5.2f zł%n", konto.pobierzSrodkiBezpiecznie(zbytDuzaKwota));
 
         // wyciągnięcie środków bez obsługi błędu
-        System.out.printf("Pobrane środki: %5.2f %n", konto.pobierzSrodki(malaKwota));
-        System.out.printf("Pobrane środki: %5.2f %n", konto.pobierzSrodki(zbytDuzaKwota));
+        System.out.printf("Pobrane środki: %5.2f zł%n", konto.pobierzSrodki(malaKwota));
+        System.out.printf("Pobrane środki: %5.2f zł%n", konto.pobierzSrodki(zbytDuzaKwota));
     }
 }
